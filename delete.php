@@ -5,7 +5,7 @@
     mysqli_select_db($a,"fruits1");
     $data = json_decode(file_get_contents('php://input'), true);
     $id = $data["Id"];
-    $sqlDel = "DELETE FROM Fruit WHERE Id = '$id";
+    $sqlDel = "DELETE FROM Fruit WHERE Id = '$id'";
     $a->query($sqlDel);
     $sql = "SELECT * FROM Fruit";
     $query = mysqli_query($a,$sql);
